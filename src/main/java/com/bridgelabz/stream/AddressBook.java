@@ -1,5 +1,6 @@
 package com.bridgelabz.stream;
 
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -20,6 +21,7 @@ public class AddressBook {
         }
         boolean status = true;
         do {
+
             System.out.println("Enter the number according to to requirment");
             System.out.println("Enter 1 to Add");
             System.out.println("Enter 2 to Edit");
@@ -35,7 +37,7 @@ public class AddressBook {
                     delete();
                     break;
                 default:
-                    status = false;
+                    status =false;
             }
         } while (status);
     }
@@ -142,7 +144,6 @@ public class AddressBook {
             System.out.println(it.next());
         }
     }
-
     @Override
     public String toString() {
         return "AddressBook{" +
