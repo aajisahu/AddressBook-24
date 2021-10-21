@@ -1,27 +1,35 @@
 package com.bridgelabz.stream;
+
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 public class AddressBook {
     Scanner scan = new Scanner(System.in);
-    ArrayList<Contacts> list = new ArrayList<Contacts>();
-    public ArrayList<Contacts> arrayRead;
-
+    public List<Contacts> list = new ArrayList<Contacts>();
     public void operation() {
-        list = arrayRead;
+            System.out.println("Enter the number according to to requirment");
+        System.out.println("Enter 1 to Add");
+        System.out.println("Enter 2 to Edit");
+        System.out.println("Enter 3 to Delete");
+        int count = scan.nextInt();
+        AddressBook addressBook = new AddressBook();
+        int contactCount=1;
+        while(contactCount<=count) {
+
+            addressBook.add();
+            contactCount++;
+        }
         boolean status = true;
         do {
-            System.out.println("Enter the number according to to requirment");
-            System.out.println("Enter 1 to Add");
-            System.out.println("Enter 2 to Edit");
-            System.out.println("Enter 3 to Delete");
             switch (scan.nextInt()) {
                 case 1:
                     add();
                     break;
                 case 2:
                     edit();
+                    break;
                 case 3:
                     delete();
                     break;
@@ -63,8 +71,8 @@ public class AddressBook {
         String email = scan.next();
         contacts.setEmail(email);
         list.add(contacts);
+        print();
     }
-
     public void edit() {
         System.out.println("Enter your First name:");
         String firstName = scan.next();
@@ -109,7 +117,6 @@ public class AddressBook {
             }
         }
     }
-
     public void delete() {
         System.out.println("Enter your First name:");
         String firstName = scan.next();
@@ -121,6 +128,12 @@ public class AddressBook {
             if (firstName.equals(contacts.getFirstName())) {
                 list.remove(contacts);
             }
+        }
+    }
+    public void print() {
+        Iterator<Contacts> it = list.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
         }
     }
 }

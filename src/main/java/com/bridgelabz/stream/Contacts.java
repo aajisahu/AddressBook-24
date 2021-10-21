@@ -1,6 +1,5 @@
 package com.bridgelabz.stream;
 
-
 public class Contacts {
     private String firstName;
     private String lastName;
