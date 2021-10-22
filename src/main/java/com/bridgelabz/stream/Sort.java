@@ -3,7 +3,7 @@ package com.bridgelabz.stream;
 import java.util.Comparator;
 
 /*
- * method to sort by city
+ * anonymous calss to sort by city
  */
 public class Sort {
 	static Comparator<Contacts> compareCity = new Comparator<Contacts>() {
@@ -12,11 +12,24 @@ public class Sort {
 		}
 	};
 	/*
-	 * Method to State search
+	 * anonymous calss to State search
 	 */
 	static Comparator<Contacts> compareState = new Comparator<Contacts>() {
         public int compare(Contacts one, Contacts two) {
             return one.getState().compareTo(two.getState());
         }
     };
+
+    /*
+     * 
+	 * anonymous calss to search a person by using first name
+	 *
+     */
+    static Comparator<Contacts> compareFirstName = new Comparator<Contacts>() {
+        public int compare(Contacts one, Contacts two) {
+            return one.getFirstName().compareTo(two.getFirstName());
+        }
+    };
+
+
 }
