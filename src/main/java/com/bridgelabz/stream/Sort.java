@@ -11,5 +11,12 @@ public class Sort {
 			return one.getCity().compareTo(two.getCity());
 		}
 	};
-
+	/*
+	 * Method to State search
+	 */
+	static Comparator<Contacts> compareState = new Comparator<Contacts>() {
+        public int compare(Contacts one, Contacts two) {
+            return one.getState().compareTo(two.getState());
+        }
+    };
 }
