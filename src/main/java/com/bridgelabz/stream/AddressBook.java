@@ -165,6 +165,18 @@ public class AddressBook {
 		Long total = list.stream().count();
 		System.out.println(total);
 	}
+	/*
+	 * method to search a person by Zip
+	 */
+	 public void sortByZip() {
+	        Collections.sort(list, Sort.compareZip);
+	    }
+	/*
+	 * method to search a person by using first name
+	 */
+	public void sortByFirstName() {
+		Collections.sort(list, Sort.compareFirstName);
+	}
 
 	/*
 	 * method for sort by city
