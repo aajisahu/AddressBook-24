@@ -156,18 +156,29 @@ public class AddressBook {
 			System.out.println(it.next());
 		}
 	}
-/*
- * method for sort by city
- */
-	 public void sortCity() {
-	        Collections.sort(list, Sort.compareCity);
-	    }
-/*
- * method for sort by state
- */
-	    public void sortState() {
-	        Collections.sort(list, Sort.compareState);
-	    }
+
+	/*
+	 * method to count using stream
+	 */
+
+	public void countList() {
+		Long total = list.stream().count();
+		System.out.println(total);
+	}
+
+	/*
+	 * method for sort by city
+	 */
+	public void sortCity() {
+		Collections.sort(list, Sort.compareCity);
+	}
+
+	/*
+	 * method for sort by state
+	 */
+	public void sortState() {
+		Collections.sort(list, Sort.compareState);
+	}
 	/*
 	 * overriding the to string mathod and returning list
 	 */
